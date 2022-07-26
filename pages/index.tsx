@@ -27,11 +27,11 @@ const Home: NextPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
 
   const { data } = useGetLatLngQuery(stateSearch.placeId)
-  console.log(data)
+  // console.log(data)
   const defaultProps = {
     center: {
-      lat: data.result.geometry.location.lat ?? 10.99835602,
-      lng: data.result.geometry.location.lng ?? 77.01502627,
+      lat: data?.result.geometry.location.lat ?? 10.99835602,
+      lng: data?.result.geometry.location.lng ?? 77.01502627,
     },
     zoom: 13,
   }
